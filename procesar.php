@@ -1,30 +1,75 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $correo = $_POST["correo"];
-    $contrasena = $_POST["contrasena"];
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión con Con Pasion y Corazon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.yourwebsite.com/path/to/huaso-huasa-chilenos-bailando.jpg');
+            background-size: cover;
+            background-position: center;
+        }
 
-    // Verificar las credenciales (esto debe hacerse de manera segura)
-    $credenciales_correctas = true;
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
 
-    if ($credenciales_correctas) {
-        // Enviar correo electrónico
-        $destinatario = "omardiazburgos588@gmail.com";
-        $asunto = "Inicio de sesión exitoso";
-        $mensaje = "Inicio de sesión exitoso para el correo: $correo";
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
 
-        // Puedes personalizar el encabezado según tus necesidades
-        $headers = "From: webmaster@example.com\r\n";
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
 
-        // Enviar el correo electrónico
-        mail($destinatario, $asunto, $mensaje, $headers);
+        button:hover {
+            opacity: 0.8;
+        }
 
-        // Redirigir a la página de agradecimiento
-        header("Location: gracias.html");
-        exit();
-    } else {
-        // Redirigir de nuevo a la página de inicio de sesión en caso de credenciales incorrectas
-        header("Location: index.html");
-        exit();
-    }
-}
-?>
+        .title {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .logo {
+            width: 200px;
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="cueca-958x575.jpeg" alt="Con Pasion y Corazon" class="logo">
+        <h2 class="title">Iniciar sesión</h2>
+        <form>
+            <label for="uname"><b>Email o número de teléfono</b></label>
+            <input type="text" placeholder="Ingresa un email o un número de teléfono válido" name="uname" required>
+
+            <label for="psw"><b>Contraseña</b></label>
+            <input type="password" placeholder="Ingresa tu contraseña" name="psw" required>
+
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+</body>
+</html>
