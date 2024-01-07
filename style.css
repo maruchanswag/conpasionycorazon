@@ -1,0 +1,861 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+
+/* login*/
+
+body{
+    background: #eeecec;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cont_1{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.cont_1 .img img{
+    margin-left: -100px;
+    margin-right: 150px;
+    animation: ab 5s ease-in-out infinite;
+}
+
+@keyframes ab{
+    50%{
+        transform: translateY(30px);
+    }100%{
+        transform: translateY(0px);
+    }
+}
+.cont_1 img{
+    width: 500px;
+}
+
+.form_login{
+   
+    width: 300px;
+    height: auto;
+    padding: 50px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: -5px 7px 23px 0px rgba(0,0,0,0.36);
+}
+
+
+.form_login img{
+    margin-top: -40px;
+    margin-left: 40px;
+}
+
+
+.form_login h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 25px;
+    margin-left: 65px;
+}
+
+
+
+
+.form_login button{
+    padding: 5px 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: 0.5s all ease-in-out;
+}
+
+.form_login button:hover{
+    transform: scale(1.1);
+}
+.form_login input{
+    width: 200px;
+    height: 20px;
+    border: 0;
+    border-bottom: 1px solid black ;
+    margin-bottom: 10px;
+    outline: none;
+    transition: 0.8s all ease-in-out;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.form_login input:hover{
+    border-bottom: 1px solid blue  ;
+}
+
+.form_login img{
+    width: 100px;
+}
+
+.regis_1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.register{
+    
+    width: 350px;
+    display: block;
+    padding: 80px;
+    background: white;
+    box-shadow: -5px 7px 23px 0px rgba(0,0,0,0.36);
+    margin-top: 90px ;
+    height: 600px;
+    margin-bottom: 50px;
+    
+}
+
+.register label{
+    display: flex;
+    
+}
+
+
+
+.register input{
+    margin-bottom: 20px;
+    height: 25px;
+    width: 200px;
+    outline:none;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-left: -3px;
+
+}
+
+
+.regis_1 form .register img{
+    margin-left: -10px;
+    width: 25px;
+   
+    
+}
+
+#icon_0{
+    color: rgb(129, 129, 7);
+}
+
+
+.regis_1 form .register h2{
+    color: black;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    margin-top: -25px;
+}
+.register h2{
+    margin-top: -30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.register button{
+    margin-top:10px ;
+    padding: 10px 15px ;
+    background: blue;
+    color: white;
+    border: none; border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.register button:hover{
+    transform: scale(1.1);
+}
+
+.cont_5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: rgb(255, 0, 0);
+    margin-top: -30px;
+}
+
+#boton{
+ background: blue;
+ color: white;
+ height: 30px;
+ border-radius:5px ;
+ margin-top: 20px;  
+ cursor: pointer; 
+}
+
+.cont_6{    
+  background: green;      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 30px;
+  border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cont_7{
+    background: blue;    
+    width: 100%;  
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 30px;
+    border-radius: 10px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.cont_7 a{
+    
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width:768px){
+    .contenedor .img{
+        display: none;
+    }
+}
+
+
+.past_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background: red;
+    color: white;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 10px ;
+}
+
+.rg{
+    color: white;
+    text-decoration: none;
+    background: blue;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.perf{
+    max-width: 100%;
+    height: 50px; 
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background: blue;
+}
+
+.perf i{
+    
+    justify-content: center;
+    font-size: 24px;
+    padding: 80px;
+    color: white;
+}
+
+.perf i{
+    cursor: pointer;
+}
+
+.nav_perf{
+    position: fixed;
+    color: black;
+    margin-top: 100px;
+    background: #cfcdcd;
+    width: 100px;
+    height: 0px;
+    border-radius: 5px;
+    overflow: hidden;
+    right:  80px;    
+    z-index: 10;
+    transition: 0.8s all ease;
+}
+
+.perf .nav_perf ul{
+    margin: 10px 0px;
+    text-align: center;
+    
+}
+
+.perf .nav_perf ul li{
+    list-style: none;
+}
+
+
+.perf .nav_perf ul li a{
+    text-decoration: none;
+    color: black;
+    transition:  0.5s all ease;
+}
+
+.perf .nav_perf ul li a:hover{
+    color: blue;
+}
+
+
+.menu_menu{
+    height: 70px;
+}
+
+main{
+    max-width: 100%;
+    height: 250px;
+    background: rgb(13, 69, 252);
+    margin-top: 0px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuerpo{
+    display: flex;
+    
+    
+}
+
+.cuerpo i{
+    
+    font-size: 100px;
+    color: white;
+    
+}
+
+.cuerpo .h h2{
+    font-size:  54px;
+    margin-top: 25px;
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.cuerpo .edit_1{
+    margin-left: 300px;
+    margin-top: 35px;
+
+}
+
+.cuerpo .edit_1 a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.edit_2 i{
+    font-size: 24px;
+    padding: 10px;
+    
+}
+
+.edit_2{
+    margin-left: 20px;
+    background: rgb(10, 5, 56);
+    padding: 35px 25px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer;   
+}
+
+.edit_2 a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+       
+}
+
+
+
+.inf{
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.inf p{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+.perf i{
+    color: black;
+    margin-left: 1000px;
+}
+
+.regis_1 form i{
+    display: flex;
+    position: absolute;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.modal .modal-body .fol{
+    width: 100%;
+    padding: 5px;
+    margin-left: 120px;
+}
+
+.modal .modal-body label{
+    display: flex;
+}
+.modal .modal-body input{
+ padding: 6;   
+}
+
+.modal .botones{
+    margin-left: 350px;
+}
+
+.modal .botones button{
+    
+    border: 1px solid; 
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.modal .botones input{
+    padding: 7px;
+    color: white;
+    background: blue;
+    border: none;
+    border-radius: 5px;
+}
+
+.agregar{
+    
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: -25px;
+}
+
+.agregar .for_cliente{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    margin: 20px;
+    margin-left: -900px;
+    background: rgb(236, 236, 236);
+    box-shadow: 0px 2px 5px 0px;
+    border-radius: 10px;
+}
+
+.agregar .for_cliente form{
+    
+    margin: 10px;
+    width: 250px;
+    
+
+}
+
+.agregar .for_cliente form h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: blue;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.agregar .for_cliente form input{
+    width: 250px;
+    height: 30px;
+    margin-bottom: 20px;   
+}
+
+.agregar .for_cliente  form #agre_cliente{
+    background: blue;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table{
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-collapse:collapse ;
+}
+
+table thead tr th{
+    padding: 30px;
+    color:white;
+    background: blue;
+    border-bottom: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+
+}
+
+table tbody tr td{
+    padding: 10px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+tr:nth-child(even){
+    background-color:#ddd ;
+}
+
+.bus_cant{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-left: -110px;
+    padding: 10px;
+    align-items: center;
+}
+
+.bus_cant .buscar input{
+    border-radius: 20px;
+    border: 1px solid black;
+    height: 30px;
+    opacity: 0.8;
+    
+}
+
+.bus_cant .buscar{
+    padding: 10px;
+}
+
+.for_table table .no{
+    display: none;
+}
+
+#buscar_c{
+    background: blue;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: 0.8s all ease;
+}
+
+#buscar_c:hover{
+    opacity: 0.6; 
+}
+
+.cliente{
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px ;
+    text-align: center;
+}
+
+.clientes1{
+    background: blue;
+    color: white;
+    padding: 8px 15px;
+    
+}
+
+.edita_cliente{
+    margin-left: 100px;
+}
+
+.edita_cliente input{
+    width: 250px;
+    
+}
+
+.edita_cliente label{
+    margin-top: 15px;
+}
+
+
+.modal-body, .modal-footer{
+    background: #eeeeee;
+}
+
+
+.modal-header{
+    background: blue;
+    
+}
+
+#editar_cliente{
+    border: none;
+    background: blue;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+#ex a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.for_table .no2 a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.conter{
+    max-width: 100%;
+}
+
+.conter_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:100px ;
+   
+}
+
+.form_1{    
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+form .cnt{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    margin-left: 35px;
+    
+}
+
+form .tc{
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom:40px ;
+}
+
+form input{
+    height: 27px;
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+form .cancel{
+    background: red;
+    padding: 13px 10px;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+form .botones{
+    margin-bottom: 20px;
+}
+
+form a{
+    color: white;
+    text-decoration: none;
+}
+
+form .botones button a{
+    color: white;
+    text-decoration: none;
+}
+
+#EDIT_CLIENTES{
+    background: blue;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#ea{
+    background: blue;
+    border: none;
+}
+
+#ea a{
+    color: white;
+    text-decoration: none;
+}
+
+.cantidad{
+    margin-top: -15px;
+}
+
+.CAJA_EDT{
+width: 100%;   
+display: flex;
+justify-content: center;
+margin-top: 100px;
+
+
+}
+
+.CAJA_EDT h2{
+color: blue;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 28px;
+text-align: center;
+margin-top: 30px;
+margin-bottom: 35px;
+}
+
+.CAJA_EDT1 {
+    display: flex;
+    flex-direction: column;
+    
+ width: 350px;
+ border: 1px solid black;
+ border-radius: 10px;
+ background: white;
+}
+
+.CAJA_EDT1 label,input{
+    margin-left: 60px;
+}
+
+.CAJA_EDT1 .BOTON{
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.CAJA_EDT1 .BOTON button{
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+
+}
+
+#user,#clave{
+    margin-left: -2px;
+}
+
+.agregado{
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background: green;
+}
+
+.cancelar{
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background: red;
+}
+
+.EDID{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background: green;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.CC{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background: red;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.regis_1 a i{
+    margin-top: 120px;
+}
+
+.panel img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.panel .panel-heading{
+    font-size: 34px;
+    font-weight: 600;
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.panel h3{
+    font-size: 16px;
+}
+
+.panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    
+    
+}
+
+
+.panel form{
+    width: 360px;
+   
+    background: #F5f5f5;
+    box-shadow: 0px 2px 5px 0px;
+    border-radius: 10px;
+}
+
+
+#log{
+    margin-bottom: 20px;
+    padding: 7px 10px;
+    border: none;
+    cursor: pointer;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+}
