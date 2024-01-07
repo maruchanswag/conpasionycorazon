@@ -1,75 +1,41 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión con Con Pasion y Corazon</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://www.yourwebsite.com/path/to/huaso-huasa-chilenos-bailando.jpg');
-            background-size: cover;
-            background-position: center;
-        }
+<?php
+// Iniciar sesión en la base de datos (reemplace con sus credenciales)
+$servername = "localhost";
+$username = "your_username";
+$password = "your_password";
+$dbname = "your_database";
 
-        .container {
-            width: 300px;
-            padding: 16px;
-            background-color: white;
-            margin: 0 auto;
-            margin-top: 100px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        }
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Falló la conexión: " . $conn->connect_error);
+}
 
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
+// Obtener los datos del formulario
+$uname = $_POST['uname'];
+$psw = $_POST['psw'];
 
-        button:hover {
-            opacity: 0.8;
-        }
+// Preparar consulta SQL (considerando correo o teléfono)
+$sql = "SELECT * FROM usuarios WHERE (email = ? OR telefono = ?) AND contraseña = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("sss", $uname, $uname, $psw);
 
-        .title {
-            text-align: center;
-            margin-bottom: 16px;
-        }
+// Ejecutar la consulta
+$stmt->execute();
 
-        .logo {
-            width: 200px;
-            margin: 0 auto;
-            display: block;
-            margin-bottom: 16px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="cueca-958x575.jpeg" alt="Con Pasion y Corazon" class="logo">
-        <h2 class="title">Iniciar sesión</h2>
-        <form>
-            <label for="uname"><b>Email o número de teléfono</b></label>
-            <input type="text" placeholder="Ingresa un email o un número de teléfono válido" name="uname" required>
+// Comprobar si el usuario existe
+if ($stmt->fetch()) {
+    // Iniciar sesión exitosa
+    session_start();
+    $_SESSION['usuario'] = $uname; // Almacenar el nombre de usuario en la sesión
+    header("Location: inicio.php"); // Redirigir al sitio principal
+} else {
+    // Error de inicio de sesión
+    header("Location: login.php?error=1"); // Redirigir al login con mensaje de error
+}
 
-            <label for="psw"><b>Contraseña</b></label>
-            <input type="password" placeholder="Ingresa tu contraseña" name="psw" required>
-
-            <button type="submit">Iniciar sesión</button>
-        </form>
-    </div>
-</body>
-</html>
+$stmt->close();
+$conn->close();
+?>
